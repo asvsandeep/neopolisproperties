@@ -4,6 +4,9 @@
   html {
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
@@ -13,6 +16,10 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: #F8F6F1;
     color: #20242C;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 
   h1, h2, h3, h4, .font-serif, .font-display, .font-editorial {
@@ -31,8 +38,8 @@
 
 /* Custom scrollbar in Luxury Gold & Navy theme */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #101827;
@@ -45,3 +52,11 @@
   background: #deb877;
 }
 
+/* Hide scrollbar utility for clean swipeable mobile tabs */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

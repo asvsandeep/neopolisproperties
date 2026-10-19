@@ -33,34 +33,34 @@ export const AboutNeopolisSection: React.FC = () => {
   ];
 
   return (
-    <section id="about-neopolis" className="py-20 lg:py-28 bg-[#F8F6F1] text-[#20242C] relative">
+    <section id="about-neopolis" className="py-14 sm:py-20 lg:py-28 bg-[#F8F6F1] text-[#20242C] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-14 space-y-3">
-          <span className="text-xs font-sans font-semibold tracking-[0.25em] text-[#C7A66A] uppercase block">
+        <div className="max-w-3xl mb-8 sm:mb-14 space-y-2 sm:space-y-3">
+          <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.2em] sm:tracking-[0.25em] text-[#C7A66A] uppercase block">
             The Micro-Market Narrative
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#101827] tracking-tight leading-[1.15]">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#101827] tracking-tight leading-[1.15]">
             About Neopolis, Kokapet
           </h2>
-          <p className="text-base text-[#737780] font-sans font-normal leading-relaxed">
+          <p className="text-sm sm:text-base text-[#737780] font-sans font-normal leading-relaxed">
             Hyderabad’s most anticipated luxury enclave, engineered from the ground up as a master-planned, high-density residential and commercial destination.
           </p>
         </div>
 
         {/* 4 Pillars Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-16">
           {pillars.map((pillar, idx) => {
             const IconComponent = pillar.icon;
             return (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-md border border-neutral-200 shadow-xs space-y-3 hover:border-[#C7A66A]/40 transition-colors"
+                className="bg-white p-5 sm:p-6 rounded-md border border-neutral-200 shadow-xs space-y-2.5 sm:space-y-3 hover:border-[#C7A66A]/40 transition-colors"
               >
-                <div className="w-10 h-10 rounded-sm bg-[#101827] text-[#C7A66A] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-sm bg-[#101827] text-[#C7A66A] flex items-center justify-center shrink-0">
                   <IconComponent className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-serif font-medium text-[#101827]">
+                <h3 className="text-base sm:text-lg font-serif font-medium text-[#101827]">
                   {pillar.title}
                 </h3>
                 <p className="text-xs text-[#737780] font-sans leading-relaxed">
@@ -72,17 +72,17 @@ export const AboutNeopolisSection: React.FC = () => {
         </div>
 
         {/* FAQs Accordion */}
-        <div className="bg-white rounded-md border border-neutral-200 p-8 sm:p-12 shadow-xs">
-          <div className="max-w-2xl mb-8 space-y-2">
-            <span className="text-xs font-sans font-semibold text-[#C7A66A] uppercase tracking-wider">
+        <div className="bg-white rounded-md border border-neutral-200 p-5 sm:p-8 lg:p-12 shadow-xs">
+          <div className="max-w-2xl mb-6 sm:mb-8 space-y-1.5 sm:space-y-2">
+            <span className="text-xs font-sans font-semibold text-[#C7A66A] uppercase tracking-wider block">
               Common Inquiries
             </span>
-            <h3 className="text-2xl sm:text-3xl font-serif font-normal text-[#101827]">
+            <h3 className="text-xl sm:text-3xl font-serif font-normal text-[#101827]">
               Frequently Asked Questions About Neopolis Residences
             </h3>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {FAQS.map((faq, index) => {
               const isOpen = openFaqIndex === index;
               return (
@@ -92,21 +92,21 @@ export const AboutNeopolisSection: React.FC = () => {
                 >
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 bg-neutral-50 hover:bg-neutral-100/70 transition-colors cursor-pointer"
+                    className="w-full px-4 sm:px-6 py-3.5 sm:py-4 text-left flex items-center justify-between gap-3 sm:gap-4 bg-neutral-50 hover:bg-neutral-100/70 transition-colors cursor-pointer"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-serif text-base sm:text-lg text-[#101827] font-medium">
+                    <span className="font-serif text-sm sm:text-lg text-[#101827] font-medium leading-snug">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-4 h-4 text-[#C7A66A] shrink-0 transition-transform duration-300 ${
+                      className={`w-4 h-4 sm:w-5 sm:h-5 text-[#C7A66A] shrink-0 transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 py-4 bg-white text-xs sm:text-sm text-[#737780] font-sans leading-relaxed border-t border-neutral-200/60 animate-in fade-in duration-200">
+                    <div className="px-4 sm:px-6 py-4 sm:py-5 bg-white text-xs sm:text-sm text-[#737780] font-sans leading-relaxed border-t border-neutral-200/60 animate-in fade-in duration-200">
                       {faq.answer}
                     </div>
                   )}

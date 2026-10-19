@@ -46,7 +46,7 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
     if (!phone.trim()) {
       newErrors.phone = 'Please provide a contact phone number';
     } else if (!/^[0-9+() -]{8,15}$/.test(phone.trim())) {
-      newErrors.phone = 'Please provide a valid 10-digit contact number';
+      newErrors.phone = 'Please provide a valid contact number';
     }
     if (!email.trim()) {
       newErrors.email = 'Please provide your email address';
@@ -77,29 +77,29 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-[#101827] text-white relative overflow-hidden">
+    <section id="contact" className="py-14 sm:py-20 lg:py-28 bg-[#101827] text-white relative overflow-hidden">
       {/* Ambient background accents */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#C7A66A]/5 blur-[160px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Advisory Value Proposition */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="space-y-3">
-              <span className="text-xs font-sans font-semibold tracking-[0.25em] text-[#C7A66A] uppercase block">
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
+            <div className="space-y-2 sm:space-y-3">
+              <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.2em] sm:tracking-[0.25em] text-[#C7A66A] uppercase block">
                 Private Advisory Desk
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white tracking-tight leading-[1.15]">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-normal text-white tracking-tight leading-[1.15]">
                 Request Current Availability & Brochures
               </h2>
-              <p className="text-base text-neutral-300 font-sans font-normal leading-relaxed">
+              <p className="text-sm sm:text-base text-neutral-300 font-sans font-normal leading-relaxed">
                 Connect with our verified luxury residential desk for developer floor plans, current unit allocations, payment schedules, and private on-site presentations.
               </p>
             </div>
 
-            <div className="space-y-4 pt-2">
-              <div className="flex items-start gap-3.5 p-4 rounded-sm bg-white/[0.03] border border-white/5">
+            <div className="space-y-3 sm:space-y-4 pt-1 sm:pt-2">
+              <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-sm bg-white/[0.03] border border-white/5">
                 <ShieldCheck className="w-5 h-5 text-[#C7A66A] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-sans font-semibold text-white">Direct Developer Coordination</h4>
@@ -109,7 +109,7 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                 </div>
               </div>
 
-              <div className="flex items-start gap-3.5 p-4 rounded-sm bg-white/[0.03] border border-white/5">
+              <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-sm bg-white/[0.03] border border-white/5">
                 <Calendar className="w-5 h-5 text-[#C7A66A] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-sans font-semibold text-white">Escorted Site Visits</h4>
@@ -119,7 +119,7 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                 </div>
               </div>
 
-              <div className="flex items-start gap-3.5 p-4 rounded-sm bg-white/[0.03] border border-white/5">
+              <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-sm bg-white/[0.03] border border-white/5">
                 <Lock className="w-5 h-5 text-[#C7A66A] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-sans font-semibold text-white">Confidential Consultation</h4>
@@ -133,23 +133,23 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
 
           {/* Right Column: Interactive Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-md p-8 sm:p-10 shadow-2xl text-[#20242C]">
+            <div className="bg-white rounded-md p-5 sm:p-8 lg:p-10 shadow-2xl text-[#20242C]">
               {submittedRef ? (
-                <div className="py-8 text-center space-y-5 animate-in fade-in duration-300">
-                  <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-emerald-600 border border-emerald-200">
-                    <CheckCircle2 className="w-8 h-8" />
+                <div className="py-6 sm:py-8 text-center space-y-4 sm:space-y-5 animate-in fade-in duration-300">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-emerald-600 border border-emerald-200">
+                    <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
                   </div>
                   <div className="space-y-2">
                     <span className="text-xs font-sans font-semibold text-[#C7A66A] uppercase tracking-widest block">
                       Enquiry Registered
                     </span>
-                    <h3 className="text-2xl sm:text-3xl font-serif text-[#101827]">
+                    <h3 className="text-xl sm:text-3xl font-serif text-[#101827]">
                       Thank You, {fullName}
                     </h3>
-                    <p className="text-sm text-[#737780] font-sans max-w-md mx-auto leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#737780] font-sans max-w-md mx-auto leading-relaxed">
                       Your consultation request for <strong className="text-[#101827]">{project === 'all' ? 'Neopolis Luxury Residences' : project}</strong> has been logged with Reference ID:
                     </p>
-                    <div className="inline-block px-4 py-2 bg-neutral-100 rounded-sm font-mono text-sm font-bold text-[#101827] tracking-wider mt-2">
+                    <div className="inline-block px-4 py-2 bg-neutral-100 rounded-sm font-mono text-sm sm:text-base font-bold text-[#101827] tracking-wider mt-2">
                       {submittedRef}
                     </div>
                   </div>
@@ -166,59 +166,55 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                       setEmail('');
                       setMessage('');
                     }}
-                    className="mt-4 px-6 py-2.5 border border-neutral-300 hover:border-[#101827] text-xs font-sans font-medium uppercase tracking-wider rounded-sm transition-colors cursor-pointer"
+                    className="mt-3 px-5 py-2.5 border border-neutral-300 hover:border-[#101827] text-xs font-sans font-medium uppercase tracking-wider rounded-sm transition-colors cursor-pointer"
                   >
                     Submit Another Inquiry
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="border-b border-neutral-200 pb-4 mb-2">
-                    <h3 className="text-xl sm:text-2xl font-serif text-[#101827]">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  <div className="border-b border-neutral-200 pb-3 sm:pb-4 mb-2">
+                    <h3 className="text-lg sm:text-2xl font-serif text-[#101827]">
                       Schedule a Private Presentation
                     </h3>
-                    <p className="text-xs text-[#737780] font-sans mt-1">
+                    <p className="text-xs text-[#737780] font-sans mt-0.5 sm:mt-1">
                       Complete the form below to receive verified brochures and schedule a personalized tour.
                     </p>
                   </div>
 
                   {/* Full Name & Phone */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                    <div className="space-y-1">
+                      <label className="text-[11px] sm:text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
                         Full Name *
                       </label>
-                      <div className="relative">
-                        <input
-                          type="text"
-                          value={fullName}
-                          onChange={(e) => setFullName(e.target.value)}
-                          placeholder="e.g. Rajesh Reddy"
-                          className={`w-full px-3.5 py-2.5 text-xs sm:text-sm font-sans bg-neutral-50 border rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A] ${
-                            errors.fullName ? 'border-red-500' : 'border-neutral-300'
-                          }`}
-                        />
-                      </div>
+                      <input
+                        type="text"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        placeholder="e.g. Rajesh Reddy"
+                        className={`w-full px-3.5 py-2.5 text-base sm:text-sm font-sans bg-neutral-50 border rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A] ${
+                          errors.fullName ? 'border-red-500' : 'border-neutral-300'
+                        }`}
+                      />
                       {errors.fullName && (
                         <span className="text-[11px] text-red-600 block">{errors.fullName}</span>
                       )}
                     </div>
 
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
+                    <div className="space-y-1">
+                      <label className="text-[11px] sm:text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
                         Phone Number *
                       </label>
-                      <div className="relative">
-                        <input
-                          type="tel"
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          placeholder="+91 98765 43210"
-                          className={`w-full px-3.5 py-2.5 text-xs sm:text-sm font-sans bg-neutral-50 border rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A] ${
-                            errors.phone ? 'border-red-500' : 'border-neutral-300'
-                          }`}
-                        />
-                      </div>
+                      <input
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder="+91 98765 43210"
+                        className={`w-full px-3.5 py-2.5 text-base sm:text-sm font-sans bg-neutral-50 border rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A] ${
+                          errors.phone ? 'border-red-500' : 'border-neutral-300'
+                        }`}
+                      />
                       {errors.phone && (
                         <span className="text-[11px] text-red-600 block">{errors.phone}</span>
                       )}
@@ -226,8 +222,8 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                   </div>
 
                   {/* Email */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
+                  <div className="space-y-1">
+                    <label className="text-[11px] sm:text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
                       Email Address *
                     </label>
                     <input
@@ -235,7 +231,7 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="e.g. rajesh.reddy@example.com"
-                      className={`w-full px-3.5 py-2.5 text-xs sm:text-sm font-sans bg-neutral-50 border rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A] ${
+                      className={`w-full px-3.5 py-2.5 text-base sm:text-sm font-sans bg-neutral-50 border rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A] ${
                         errors.email ? 'border-red-500' : 'border-neutral-300'
                       }`}
                     />
@@ -245,15 +241,15 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                   </div>
 
                   {/* Project Selector & Configuration Preference */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                    <div className="space-y-1">
+                      <label className="text-[11px] sm:text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
                         Project of Interest
                       </label>
                       <select
                         value={project}
                         onChange={(e) => setProject(e.target.value)}
-                        className="w-full px-3 py-2.5 text-xs sm:text-sm font-sans bg-neutral-50 border border-neutral-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A]"
+                        className="w-full px-3 py-2.5 text-base sm:text-sm font-sans bg-neutral-50 border border-neutral-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A]"
                       >
                         <option value="all">All 7 Neopolis Projects</option>
                         {PROJECTS_DATA.map((p) => (
@@ -264,14 +260,14 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                       </select>
                     </div>
 
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
+                    <div className="space-y-1">
+                      <label className="text-[11px] sm:text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
                         Preferred Configuration
                       </label>
                       <select
                         value={configuration}
                         onChange={(e) => setConfiguration(e.target.value)}
-                        className="w-full px-3 py-2.5 text-xs sm:text-sm font-sans bg-neutral-50 border border-neutral-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A]"
+                        className="w-full px-3 py-2.5 text-base sm:text-sm font-sans bg-neutral-50 border border-neutral-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A]"
                       >
                         <option value="flexible">Flexible / Exploring Options</option>
                         <option value="3 BHK">3 BHK Luxury Residence</option>
@@ -283,8 +279,8 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                   </div>
 
                   {/* Message (Optional) */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
+                  <div className="space-y-1">
+                    <label className="text-[11px] sm:text-xs font-sans font-semibold text-[#101827] uppercase tracking-wider block">
                       Specific Inquiries / Preferred Site Visit Date (Optional)
                     </label>
                     <textarea
@@ -292,7 +288,7 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Please share pricing, floor plan details, or request a weekend site walkthrough..."
-                      className="w-full px-3.5 py-2 text-xs sm:text-sm font-sans bg-neutral-50 border border-neutral-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A]"
+                      className="w-full px-3.5 py-2.5 text-base sm:text-sm font-sans bg-neutral-50 border border-neutral-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-[#C7A66A] focus:border-[#C7A66A]"
                     />
                   </div>
 
@@ -300,7 +296,7 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-[#101827] hover:bg-[#1a2538] active:bg-black text-[#C7A66A] hover:text-white text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest rounded-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full py-3.5 sm:py-4 bg-[#101827] hover:bg-[#1a2538] active:bg-black text-[#C7A66A] hover:text-white text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest rounded-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <span>Logging Request...</span>
@@ -313,8 +309,8 @@ export const LeadCaptureSection: React.FC<LeadCaptureSectionProps> = ({
                   </button>
 
                   <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#737780] font-sans pt-1">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>Strict privacy assurance. Details protected and never sold.</span>
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span className="text-center">Strict privacy assurance. Details protected and never sold.</span>
                   </div>
                 </form>
               )}
